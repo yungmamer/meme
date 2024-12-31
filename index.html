@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Name</title>
+    <style>
+        #image {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Enter Your Name</h1>
+    <input type="text" id="name" placeholder="Type your name" oninput="showImage()">
+
+    <div id="image">
+        <img id="personImage" src="" alt="Plastic Bottle" width="300">
+    </div>
+
+    <script>
+        function showImage() {
+            var name = document.getElementById("name").value;
+            var imgElement = document.getElementById("personImage");
+            var imageDiv = document.getElementById("image");
+
+            // Check if the user has typed the name "abdi rabi"
+            if (name.toLowerCase() === "abdi rabi") {
+                imageDiv.style.display = "block";  // Show image div
+                imgElement.src = "https://upload.wikimedia.org/wikipedia/commons/7/7b/Botella_de_pl%C3%A1stico_-_PET.jpg";  // Direct URL of the image
+            } else {
+                imageDiv.style.display = "none";  // Hide image div if the name is not "abdi rabi"
+            }
+        }
+    </script>
+
+</body>
+</html>
